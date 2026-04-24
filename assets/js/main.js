@@ -253,4 +253,41 @@
     })
   });
 
+  /**
+   * Bilingual (ES/EN) language toggle with localStorage persistence
+   */
+  (function() {
+    const STORAGE_KEY = 'site-lang';
+    const DEFAULT_LANG = 'es';
+    const stored = localStorage.getItem(STORAGE_KEY);
+    const initialLang = (stored === 'en' || stored === 'es') ? stored : DEFAULT_LANG;
+
+    // Apply language immediately (before DOMContentLoaded) to avoid flash
+    document.documentElement.lang = initialLang;
+
+    function applyLang(lang) {
+      document.documentElement.lang = lang;
+      localStorage.setItem(STORAGE_KEY, lang);
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+    }
+
+    function initLangSwitcher() {
+      const buttons = document.querySelectorAll('.lang-btn');
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          applyLang(btn.getAttribute('data-lang'));
+        });
+      });
+      applyLang(document.documentElement.lang);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initLangSwitcher);
+    } else {
+      initLangSwitcher();
+    }
+  })();
+
 })()

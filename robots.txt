@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marcosdh1987.github.io/cv/sitemap.xml
