@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>From frontier reasoning to local deployment | Marcos Soto</title>
+  <meta name="description" content="Talk on language model distillation and local deployment: teacher-student architecture, fine-tuning, cost, latency and privacy.">
+  <link rel="canonical" href="https://marcosdh1987.github.io/cv/talks/distillation-local-llm.html">
+
+  <meta property="og:title" content="From frontier reasoning to local deployment | Marcos Soto">
+  <meta property="og:description" content="How to distill a language model for a real use case: teacher-student, fine-tuning and deployment without external APIs.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://marcosdh1987.github.io/cv/talks/distillation-local-llm.html">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Set lang before body renders to avoid FOUC -->
+  <script>
+    (function() {
+      try {
+        var l = localStorage.getItem('site-lang');
+        document.documentElement.lang = (l === 'en' || l === 'es') ? l : 'es';
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Marcos Soto", "item": "https://marcosdh1987.github.io/cv/"},
+      {"@type": "ListItem", "position": 2, "name": "Talks", "item": "https://marcosdh1987.github.io/cv/#talks"},
+      {"@type": "ListItem", "position": 3, "name": "From frontier reasoning to local deployment"}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="../assets/img/profile-img.jpg" alt="Marcos Soto" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="../index.html">Marcos Esteban Soto</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://github.com/marcosdh1987" class="github" title="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/marcosesoto/" class="linkedin" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.researchgate.net/profile/Marcos-Soto-3" class="researchgate" title="ResearchGate"><i class="bx bx-book-reader"></i></a>
+          <a href="https://orcid.org/0009-0000-5787-5965" class="orcid" title="ORCID"><i class="bx bx-id-card"></i></a>
+        </div>
+        <div class="lang-switcher">
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="../index.html#hero" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="../index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="../index.html#talks" class="nav-link scrollto active"><i class="bx bx-microphone"></i> <span>Talks</span></a></li>
+          <li><a href="../index.html#writing" class="nav-link scrollto"><i class="bx bx-edit"></i> <span>Writing</span></a></li>
+          <li><a href="../index.html#research" class="nav-link scrollto"><i class="bx bx-search-alt"></i> <span>Research</span></a></li>
+          <li><a href="../index.html#projects" class="nav-link scrollto"><i class="bx bx-code-alt"></i> <span>Projects</span></a></li>
+          <li><a href="../index.html#experience" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Experience</span></a></li>
+          <li><a href="../index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Talk Page Hero ======= -->
+    <section class="talk-page-hero">
+      <div class="container">
+        <nav class="talk-breadcrumb mb-3">
+          <a href="../index.html"><span class="lang-es">Home</span><span class="lang-en">Home</span></a>
+          <span class="sep">/</span>
+          <a href="../index.html#talks"><span class="lang-es">Charlas</span><span class="lang-en">Talks</span></a>
+          <span class="sep">/</span>
+          <span class="current"><span class="lang-es">Distillation &amp; Local LLM</span><span class="lang-en">Distillation &amp; Local LLM</span></span>
+        </nav>
+        <div class="talk-meta mb-3">
+          <span class="talk-tag"><span class="lang-es">Técnica</span><span class="lang-en">Technical</span></span>
+          <span class="talk-tag">20 / 30 / 45 min</span>
+          <span class="talk-tag">Español · English</span>
+        </div>
+        <h1 class="lang-es">Del razonamiento de frontera al despliegue local: cómo destilar un modelo de lenguaje para un caso real</h1>
+        <h1 class="lang-en">From frontier reasoning to local deployment: distilling a language model for a real use case</h1>
+      </div>
+    </section>
+
+    <section class="inner-page talk-detail">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-8" data-aos="fade-up">
+
+            <div class="talk-abstract">
+              <h3><span class="lang-es">Sobre la charla</span><span class="lang-en">About the talk</span></h3>
+              <div class="lang-es">
+                <p>¿Realmente necesitás un modelo grande y costoso para cada caso de uso? En esta charla presento un caso práctico de destilación y fine-tuning donde partí de razonamiento de alta capacidad para especializar un modelo pequeño, ejecutable de forma local, con foco en costo, latencia, privacidad y mantenibilidad.</p>
+                <p>Recorro la arquitectura teacher-student, la importancia de la curación de datos sintéticos, el rol del formato estructurado como "cognitive scaffold" y las lecciones que aparecen cuando querés pasar de un experimento interesante a un sistema útil. El caso base usa Qwen 2.5 0.5B con entrenamiento en menos de dos minutos para razonamiento clínico estructurado.</p>
+              </div>
+              <div class="lang-en">
+                <p>Do you really need a large, expensive model for every use case? In this talk I present a practical distillation and fine-tuning case study, starting from high-capability reasoning to specialize a small model that runs locally — with a focus on cost, latency, privacy and maintainability.</p>
+                <p>I walk through the teacher-student architecture, the importance of curating synthetic data, the role of structured formatting as a "cognitive scaffold," and the lessons that emerge when moving from an interesting experiment to a useful system. The base case uses Qwen 2.5 0.5B trained in under two minutes for structured clinical reasoning.</p>
+              </div>
+            </div>
+
+            <div class="talk-topics mt-4">
+              <h3><span class="lang-es">Temas que cubre</span><span class="lang-en">Topics covered</span></h3>
+              <ul class="lang-es">
+                <li>Cuándo un modelo grande NO es necesario — y cuándo sí lo es</li>
+                <li>Arquitectura teacher-student: qué destila el alumno del maestro</li>
+                <li>Generación y curación de datos de entrenamiento sintéticos</li>
+                <li>Fine-tuning eficiente: QLoRA, PEFT y entrenamiento en minutos</li>
+                <li>Despliegue local con Ollama u otros runtimes ligeros</li>
+                <li>Trade-offs reales: calidad, costo, latencia, privacidad y control</li>
+                <li>Formato estructurado como forma de razonamiento guiado</li>
+                <li>De experimento a sistema: checklist de producción para small models</li>
+              </ul>
+              <ul class="lang-en">
+                <li>When a large model is NOT needed — and when it is</li>
+                <li>Teacher-student architecture: what the student distills from the teacher</li>
+                <li>Generating and curating synthetic training data</li>
+                <li>Efficient fine-tuning: QLoRA, PEFT and training in minutes</li>
+                <li>Local deployment with Ollama and other lightweight runtimes</li>
+                <li>Real trade-offs: quality, cost, latency, privacy and control</li>
+                <li>Structured formatting as a form of guided reasoning</li>
+                <li>From experiment to system: a production checklist for small models</li>
+              </ul>
+            </div>
+
+            <div class="talk-formats mt-4">
+              <h3><span class="lang-es">Formatos disponibles</span><span class="lang-en">Available formats</span></h3>
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <div class="format-card">
+                    <h5>Keynote</h5>
+                    <p class="lang-es">30–45 min · Presentación con demo en vivo o grabada. Ideal para conferencias de ML/AI.</p>
+                    <p class="lang-en">30–45 min · Presentation with live or recorded demo. Ideal for ML/AI conferences.</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="format-card">
+                    <h5><span class="lang-es">Charla técnica</span><span class="lang-en">Technical talk</span></h5>
+                    <p class="lang-es">20–30 min · Densa en código y métricas. Ideal para meetups de ML, MLOps y LLM engineering.</p>
+                    <p class="lang-en">20–30 min · Dense in code and metrics. Ideal for ML, MLOps and LLM engineering meetups.</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="format-card">
+                    <h5>Workshop-lite</h5>
+                    <p class="lang-es">45–60 min · Presentación más ejercicio de análisis en grupo. Para equipos que evalúan adoptar este enfoque.</p>
+                    <p class="lang-en">45–60 min · Presentation plus group analysis exercise. For teams evaluating this approach.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="talk-audience mt-4">
+              <h3><span class="lang-es">Audiencia ideal</span><span class="lang-en">Ideal audience</span></h3>
+              <p class="lang-es">ML Engineers y AI Engineers · Equipos que quieren reducir dependencia de APIs de terceros · Organizaciones con restricciones de privacidad o latencia · Investigadores en NLP y small models · CTOs y líderes técnicos evaluando costos de inference.</p>
+              <p class="lang-en">ML and AI Engineers · Teams looking to reduce dependency on third-party APIs · Organizations with privacy or latency constraints · NLP and small-model researchers · CTOs and technical leaders evaluating inference cost.</p>
+            </div>
+
+            <div class="talk-related mt-5">
+              <h3><span class="lang-es">Material relacionado</span><span class="lang-en">Related material</span></h3>
+              <ul class="lang-es">
+                <li><a href="https://www.linkedin.com/in/marcosesoto/" target="_blank" rel="noopener">Artículo: Distilling an SLM in Minutes</a></li>
+                <li><a href="https://doi.org/10.48550/arXiv.2502.17454" target="_blank" rel="noopener">Paper: Smart Sampling Strategies for Wireless Industrial Data Acquisition</a></li>
+                <li><a href="https://doi.org/10.5281/zenodo.15121938" target="_blank" rel="noopener">Paper: Agentic RAG for Industrial Anomaly Detection</a></li>
+              </ul>
+              <ul class="lang-en">
+                <li><a href="https://www.linkedin.com/in/marcosesoto/" target="_blank" rel="noopener">Article: Distilling an SLM in Minutes</a></li>
+                <li><a href="https://doi.org/10.48550/arXiv.2502.17454" target="_blank" rel="noopener">Paper: Smart Sampling Strategies for Wireless Industrial Data Acquisition</a></li>
+                <li><a href="https://doi.org/10.5281/zenodo.15121938" target="_blank" rel="noopener">Paper: Agentic RAG for Industrial Anomaly Detection</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <div class="talk-sidebar">
+              <div class="sidebar-block">
+                <h4><span class="lang-es">Datos rápidos</span><span class="lang-en">Quick facts</span></h4>
+                <ul class="sidebar-list lang-es">
+                  <li><i class="bi bi-clock"></i> 20, 30 o 45 minutos</li>
+                  <li><i class="bi bi-translate"></i> Español / English</li>
+                  <li><i class="bi bi-mic"></i> Técnica · Workshop-lite</li>
+                  <li><i class="bi bi-geo-alt"></i> Presencial o remoto</li>
+                </ul>
+                <ul class="sidebar-list lang-en">
+                  <li><i class="bi bi-clock"></i> 20, 30 or 45 minutes</li>
+                  <li><i class="bi bi-translate"></i> Spanish / English</li>
+                  <li><i class="bi bi-mic"></i> Technical · Workshop-lite</li>
+                  <li><i class="bi bi-geo-alt"></i> In-person or remote</li>
+                </ul>
+              </div>
+              <div class="sidebar-block mt-4">
+                <h4><span class="lang-es">Caso base</span><span class="lang-en">Base case</span></h4>
+                <ul class="sidebar-list lang-es">
+                  <li><i class="bi bi-cpu"></i> Modelo: Qwen 2.5 0.5B</li>
+                  <li><i class="bi bi-lightning"></i> Entrenamiento: &lt;2 minutos</li>
+                  <li><i class="bi bi-house"></i> Despliegue: local (Ollama)</li>
+                  <li><i class="bi bi-shield-check"></i> Dominio: razonamiento clínico estructurado</li>
+                </ul>
+                <ul class="sidebar-list lang-en">
+                  <li><i class="bi bi-cpu"></i> Model: Qwen 2.5 0.5B</li>
+                  <li><i class="bi bi-lightning"></i> Training: &lt;2 minutes</li>
+                  <li><i class="bi bi-house"></i> Deployment: local (Ollama)</li>
+                  <li><i class="bi bi-shield-check"></i> Domain: structured clinical reasoning</li>
+                </ul>
+              </div>
+              <div class="sidebar-block mt-4">
+                <h4><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></h4>
+                <p class="lang-es">Si esta charla encaja con tu evento o equipo, escribime con el contexto: tema, audiencia y formato.</p>
+                <p class="lang-en">If this talk fits your event or team, reach out with the context: topic, audience and format.</p>
+                <a href="../index.html#contact" class="btn-talk d-block text-center mt-3"><span class="lang-es">Escribir &rarr;</span><span class="lang-en">Get in touch &rarr;</span></a>
+              </div>
+              <div class="sidebar-block mt-4">
+                <h4><span class="lang-es">Otras charlas</span><span class="lang-en">Other talks</span></h4>
+                <a href="production-ai.html" class="btn-talk-secondary d-block">
+                  <span class="lang-es">Desafíos de la puesta en producción de IA &rarr;</span>
+                  <span class="lang-en">Production AI challenges &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; 2025 <strong><span>Marcos Esteban Soto</span></strong>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

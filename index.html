@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>iPortfolio - Index</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Marcos Soto | AI Engineer, Speaker &amp; PhD Researcher</title>
+  <meta name="description" content="Professional site of Marcos Soto: talks, writing, research and projects on production AI, LLM systems, small models, observability and industrial AI.">
+  <meta name="keywords" content="AI engineer, speaker, PhD researcher, LLM systems, MLOps, observability, small models, distillation, industrial AI, HealthTech">
+  <link rel="canonical" href="https://marcosdh1987.github.io/cv/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Marcos Soto | AI Engineer, Speaker &amp; PhD Researcher">
+  <meta property="og:description" content="Talks, writing, research and projects on production AI, LLM systems and applied AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://marcosdh1987.github.io/cv/">
+  <meta property="og:image" content="https://marcosdh1987.github.io/cv/assets/img/profile-img.jpg">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Set lang before body renders to avoid FOUC -->
+  <script>
+    (function() {
+      try {
+        var l = localStorage.getItem('site-lang');
+        document.documentElement.lang = (l === 'en' || l === 'es') ? l : 'es';
+      } catch (e) {}
+    })();
+  </script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -27,12 +45,27 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: iPortfolio - v3.7.0
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Schema.org ProfilePage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Marcos Esteban Soto",
+      "alternateName": "Marcos Soto",
+      "jobTitle": "ML Engineering Manager",
+      "description": "AI engineer, speaker and PhD researcher focused on ML systems, LLMs, observability, industrial AI and HealthTech.",
+      "email": "marcos.esteban.soto@gmail.com",
+      "sameAs": [
+        "https://github.com/marcosdh1987",
+        "https://www.linkedin.com/in/marcosesoto/",
+        "https://www.researchgate.net/profile/Marcos-Soto-3",
+        "https://orcid.org/0009-0000-5787-5965"
+      ]
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -45,14 +78,17 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <img src="assets/img/profile-img.jpg" alt="Marcos Soto" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Marcos Esteban Soto</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="https://github.com/marcosdh1987" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://gitlab.com/marcosdh1987" class="gitlab"><i class="bx bxl-gitlab"></i></a>
-          <a href="https://www.researchgate.net/profile/Marcos-Soto" class="researchgate"><i class="bx bx-book-reader"></i></a>
-          <a href="https://www.instagram.com/marcosdh1987/" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/marcosesoto/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/marcosdh1987" class="github" title="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/marcosesoto/" class="linkedin" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.researchgate.net/profile/Marcos-Soto-3" class="researchgate" title="ResearchGate"><i class="bx bx-book-reader"></i></a>
+          <a href="https://orcid.org/0009-0000-5787-5965" class="orcid" title="ORCID"><i class="bx bx-id-card"></i></a>
+        </div>
+        <div class="lang-switcher">
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
         </div>
       </div>
 
@@ -60,8 +96,12 @@
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Acknowledgments</span></a></li>
+          <li><a href="#talks" class="nav-link scrollto"><i class="bx bx-microphone"></i> <span>Talks</span></a></li>
+          <li><a href="#writing" class="nav-link scrollto"><i class="bx bx-edit"></i> <span>Writing</span></a></li>
+          <li><a href="#research" class="nav-link scrollto"><i class="bx bx-search-alt"></i> <span>Research</span></a></li>
+          <li><a href="#projects" class="nav-link scrollto"><i class="bx bx-code-alt"></i> <span>Projects</span></a></li>
+          <li><a href="#experience" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Experience</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -71,7 +111,22 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Marcos Esteban Soto</h1>
-      <p>I'm <span class="typed" data-typed-items="AI Engineer, ML Engineer Manager, Consultor Autónomo, Perito Técnico, PhD Candidate"></span></p>
+      <p>
+        <span class="lang-es">Soy </span><span class="lang-en">I'm </span><span class="typed" data-typed-items="AI Engineer,ML Engineering Manager,PhD Researcher,Speaker"></span>
+      </p>
+      <div class="hero-cta mt-4">
+        <a href="#talks" class="btn-hero scrollto"><span class="lang-es">Ver charlas</span><span class="lang-en">View talks</span></a>
+        <a href="#writing" class="btn-hero scrollto"><span class="lang-es">Leer artículos</span><span class="lang-en">Read articles</span></a>
+        <a href="#research" class="btn-hero scrollto"><span class="lang-es">Ver investigación</span><span class="lang-en">View research</span></a>
+      </div>
+      <div class="credibility-strip mt-4">
+        <span>Xmartlabs</span>
+        <span>Universidad Loyola</span>
+        <span>ConnectIA 2025</span>
+        <span>HealthTech Webinar</span>
+        <span>arXiv</span>
+        <span>ResearchGate</span>
+      </div>
     </div>
   </section><!-- End Hero -->
 
@@ -83,45 +138,52 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>Machine Learning and MLOps Engineer with over 16 years of experience in IT (energy, finance, education). 
-        </p><p>Currently ML Engineer Manager at Xmartlabs, leading AI initiatives and mentoring global teams. 
-        </p><p>Additionally, I work as an Independent Consultant and Technical Expert, providing custom developments, cloud architecture consulting (AWS, Azure, GCP) and judicial expert assessments in AI and data analysis projects.
-        </p><p>PhD in Data Science in progress, combining research and practical application.</p>
         </div>
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="Marcos Soto">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>AI Engineer &amp; ML Engineer Manager.</h3>
-            <p class="fst-italic">
-                ML Engineer Manager at Xmartlabs leading AI initiatives and mentoring global teams. 
-                Independent Consultant and Technical Expert providing custom AI solutions, cloud architecture consulting (AWS, Azure, GCP) and judicial expert assessments.
-                PhD in Data Science in progress, combining research and practical application in Machine Learning and AI.
-            </p>
-            <div class="row">
+            <h3>AI Engineer &amp; ML Engineering Manager.</h3>
+
+            <div class="lang-es">
+              <p class="fst-italic">Trabajo en la intersección entre sistemas de IA en producción, modelos de lenguaje, observabilidad, small models y aplicaciones industriales y HealthTech.</p>
+              <p>Soy ingeniero de sistemas, ML Engineering Manager y estudiante de doctorado en Data Science. Mi trabajo combina experiencia en entornos industriales y de producto con foco en machine learning, MLOps, LLM systems, evaluación y puesta en producción.</p>
+              <p>Me interesa especialmente el punto donde una demo deja de ser suficiente y aparecen los problemas reales: calidad de datos, trazabilidad, costo, latencia, seguridad, privacidad y mantenibilidad. En los últimos años trabajé en proyectos de IA aplicada para finanzas, industria, producto digital y salud.</p>
+            </div>
+
+            <div class="lang-en">
+              <p class="fst-italic">I work at the intersection of production AI systems, language models, observability, small models and industrial and HealthTech applications.</p>
+              <p>I'm a systems engineer, ML Engineering Manager, and PhD student in Data Science. My work combines experience across industrial and product environments with a focus on machine learning, MLOps, LLM systems, evaluation, and production deployment.</p>
+              <p>I'm particularly interested in the point where a demo is no longer enough and real problems emerge: data quality, traceability, cost, latency, security, privacy, and maintainability. In recent years I've worked on applied AI projects across finance, industry, digital product, and healthcare.</p>
+            </div>
+
+            <div class="row mt-3">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>03 Apr 1987</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+54 9 299 4182614</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Neuquen, Argentina</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>38</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>PhD in Data Science (in progress) - International MBA - Master of Big Data & BI - System Engineer</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong><span class="lang-es">Ciudad:</span><span class="lang-en">City:</span></strong> <span>Neuquén, Argentina</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>marcos.esteban.soto@gmail.com</span></li>
                 </ul>
               </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i>
+                    <strong><span class="lang-es">Formación:</span><span class="lang-en">Education:</span></strong>
+                    <span class="lang-es">PhD en Data Science (en curso) · MBA Internacional · Master en Big Data &amp; BI · Ingeniero en Sistemas</span>
+                    <span class="lang-en">PhD in Data Science (in progress) · International MBA · Master in Big Data &amp; BI · Systems Engineer</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <h2>Skills</h2>
-<p><strong>Languages & Frameworks:</strong> Python, SQL, Terraform, Docker, Kubernetes, FastAPI<br>
-<strong>Cloud & MLOps:</strong> AWS (SageMaker, Lambda, ECS, CDK), Azure ML, GCP, GitLab CI/CD<br>
-<strong>Data Science & ML:</strong> TensorFlow, PyTorch, Scikit-Learn, NLP, LLM, RAG<br>
-<strong>Tools:</strong> Dataiku, Databricks, Power BI, Jira, Trello<br>
-<strong>Languages:</strong> Spanish (Native), English (Advanced)</p>
+            <div class="mt-3">
+              <p>
+                <strong><span class="lang-es">Áreas de foco:</span><span class="lang-en">Focus areas:</span></strong>
+                <span class="lang-es">producción de IA · LLM systems · evaluation/observability · small language models · industrial AI · healthcare AI</span>
+                <span class="lang-en">production AI · LLM systems · evaluation/observability · small language models · industrial AI · healthcare AI</span>
+              </p>
+              <p><strong>Stack:</strong> Python · PyTorch · AWS/Azure/GCP · Terraform · Docker · FastAPI · Dataiku · Databricks</p>
+            </div>
           </div>
         </div>
 
@@ -129,358 +191,528 @@
     </section><!-- End About Section -->
 
 
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
+    <!-- ======= Talks Section ======= -->
+    <section id="talks" class="talks section-bg">
       <div class="container">
 
         <div class="section-title">
-          <h2>Resume</h2>
+          <h2>Talks</h2>
+          <p>
+            <span class="lang-es">Charlas sobre IA en producción, LLM systems y research aplicada. Disponibles en español e inglés, en formato keynote, panel o charla técnica.</span>
+            <span class="lang-en">Talks on production AI, LLM systems and applied research. Available in Spanish and English, as keynotes, panels or technical sessions.</span>
+          </p>
         </div>
+
+        <div class="row">
+          <div class="col-lg-6 mb-4" data-aos="fade-up">
+            <article class="talk-card">
+              <div class="talk-meta mb-2">
+                <span class="talk-tag"><span class="lang-es">Keynote · Panel · Técnica</span><span class="lang-en">Keynote · Panel · Technical</span></span>
+                <span class="talk-tag">20 / 30 / 45 min</span>
+                <span class="talk-tag">ES · EN</span>
+              </div>
+              <h3>
+                <span class="lang-es">Desafíos de la puesta en producción: del concepto al producto en IA</span>
+                <span class="lang-en">Production challenges: from concept to product in AI</span>
+              </h3>
+              <div class="lang-es">
+                <p>Muchas iniciativas de IA funcionan bien como demo, pero cambian por completo cuando entran en producción. En esta charla recorro los desafíos que aparecen al convertir una idea prometedora en un sistema útil: calidad y trazabilidad de datos, evaluaciones reales, observabilidad, escalabilidad, costos, expectativas de negocio y viabilidad técnica.</p>
+                <p class="talk-audience"><strong>Audiencia:</strong> equipos de ingeniería, líderes técnicos, equipos de producto con iniciativas de IA en curso.</p>
+              </div>
+              <div class="lang-en">
+                <p>Many AI initiatives look great as demos but change completely once they hit production. In this talk I walk through the challenges of turning a promising idea into a useful system: data quality and traceability, real evaluation, observability, scalability, cost, business expectations, and technical viability.</p>
+                <p class="talk-audience"><strong>Audience:</strong> engineering teams, technical leaders, and product teams with ongoing AI initiatives.</p>
+              </div>
+              <div class="talk-links mt-3">
+                <a href="talks/production-ai.html" class="btn-talk">
+                  <span class="lang-es">Ver detalles &rarr;</span><span class="lang-en">View details &rarr;</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <article class="talk-card">
+              <div class="talk-meta mb-2">
+                <span class="talk-tag"><span class="lang-es">Técnica</span><span class="lang-en">Technical</span></span>
+                <span class="talk-tag">20 / 30 / 45 min</span>
+                <span class="talk-tag">ES · EN</span>
+              </div>
+              <h3>
+                <span class="lang-es">Del razonamiento de frontera al despliegue local: cómo destilar un modelo de lenguaje para un caso real</span>
+                <span class="lang-en">From frontier reasoning to local deployment: distilling a language model for a real use case</span>
+              </h3>
+              <div class="lang-es">
+                <p>¿Realmente necesitás un modelo grande y costoso para cada caso de uso? En esta charla presento un caso práctico de destilación y fine-tuning donde partí de razonamiento de alta capacidad para especializar un modelo pequeño, ejecutable de forma local, con foco en costo, latencia, privacidad y mantenibilidad.</p>
+                <p class="talk-audience"><strong>Audiencia:</strong> ingenieros de ML, equipos de producto, organizaciones que evalúan reducir dependencia de APIs externas.</p>
+              </div>
+              <div class="lang-en">
+                <p>Do you really need a big expensive model for every use case? This talk walks through a practical distillation and fine-tuning case, starting from high-capacity reasoning to specialize a small, locally-deployable model — with a focus on cost, latency, privacy, and maintainability.</p>
+                <p class="talk-audience"><strong>Audience:</strong> ML engineers, product teams, organizations looking to reduce reliance on external APIs.</p>
+              </div>
+              <div class="talk-links mt-3">
+                <a href="talks/distillation-local-llm.html" class="btn-talk">
+                  <span class="lang-es">Ver detalles &rarr;</span><span class="lang-en">View details &rarr;</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-12 text-center" data-aos="fade-up">
+            <p class="talk-contact-cta">
+              <span class="lang-es">¿Organizás un evento o una charla para tu equipo? <a href="#contact">Escribime</a> con el tema, audiencia y formato.</span>
+              <span class="lang-en">Organizing an event or internal talk? <a href="#contact">Get in touch</a> with topic, audience and format.</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Talks Section -->
+
+
+    <!-- ======= Writing Section ======= -->
+    <section id="writing" class="writing">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Writing</h2>
+          <p>
+            <span class="lang-es">Escribo sobre el punto de encuentro entre investigación aplicada, sistemas de IA y problemas de producto reales. Mis textos giran alrededor de cuatro ejes: producción de IA, LLM systems, industrial AI y frameworks de trabajo.</span>
+            <span class="lang-en">I write about the intersection of applied research, AI systems, and real product problems. My writing centers on four axes: production AI, LLM systems, industrial AI, and working frameworks.</span>
+          </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 mb-4" data-aos="fade-up">
+            <article class="writing-card">
+              <div class="writing-tag mb-2"><span class="lang-es">LLM Systems · Producción</span><span class="lang-en">LLM Systems · Production</span></div>
+              <h3>
+                <span class="lang-es">Observabilidad en producción de sistemas LLM</span>
+                <span class="lang-en">Observability for LLM systems in production</span>
+              </h3>
+              <p>
+                <span class="lang-es">Qué medir, cómo trazarlo y por qué la observabilidad de un sistema de lenguaje es un problema diferente al de la observabilidad clásica de software.</span>
+                <span class="lang-en">What to measure, how to trace it, and why observability for language systems is a different problem from classical software observability.</span>
+              </p>
+              <a href="https://www.linkedin.com/in/marcosesoto/" target="_blank" rel="noopener" class="btn-writing">
+                <span class="lang-es">Leer &rarr;</span><span class="lang-en">Read &rarr;</span>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <article class="writing-card">
+              <div class="writing-tag mb-2"><span class="lang-es">Small Models · Despliegue local</span><span class="lang-en">Small Models · Local deployment</span></div>
+              <h3>
+                <span class="lang-es">Distilling an SLM in Minutes: del razonamiento de frontera al despliegue local</span>
+                <span class="lang-en">Distilling an SLM in Minutes: from frontier reasoning to local deployment</span>
+              </h3>
+              <p>
+                <span class="lang-es">Un pipeline práctico teacher-student con Qwen 2.5 0.5B: fine-tuning en menos de dos minutos, despliegue local y razonamiento clínico estructurado sin APIs externas.</span>
+                <span class="lang-en">A practical teacher-student pipeline with Qwen 2.5 0.5B: fine-tuning in under two minutes, local deployment, and structured clinical reasoning without external APIs.</span>
+              </p>
+              <a href="https://www.linkedin.com/in/marcosesoto/" target="_blank" rel="noopener" class="btn-writing">
+                <span class="lang-es">Leer &rarr;</span><span class="lang-en">Read &rarr;</span>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-lg-6 mb-4" data-aos="fade-up">
+            <article class="writing-card">
+              <div class="writing-tag mb-2"><span class="lang-es">Industrial AI · Telemetría</span><span class="lang-en">Industrial AI · Telemetry</span></div>
+              <h3>Smart Sampling Strategies for Wireless Industrial Data Acquisition</h3>
+              <p>
+                <span class="lang-es">Cómo diseñar estrategias de muestreo inteligente para reducir costo de transmisión y almacenamiento en entornos industriales sin perder fidelidad de señal.</span>
+                <span class="lang-en">How to design smart sampling strategies to reduce transmission and storage cost in industrial environments without losing signal fidelity.</span>
+              </p>
+              <a href="https://doi.org/10.48550/arXiv.2502.17454" target="_blank" rel="noopener" class="btn-writing">
+                <span class="lang-es">Leer en arXiv &rarr;</span><span class="lang-en">Read on arXiv &rarr;</span>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <article class="writing-card">
+              <div class="writing-tag mb-2"><span class="lang-es">Frameworks · GenAI</span><span class="lang-en">Frameworks · GenAI</span></div>
+              <h3>Systematic Framework for Generative AI Project Planning</h3>
+              <p>
+                <span class="lang-es">Un marco de trabajo para planificar proyectos de IA generativa con criterios de viabilidad, alcance, evaluación y criterios de adopción antes de comprometer recursos.</span>
+                <span class="lang-en">A framework for planning generative AI projects with feasibility, scope, evaluation, and adoption criteria before committing resources.</span>
+              </p>
+              <a href="https://www.linkedin.com/in/marcosesoto/" target="_blank" rel="noopener" class="btn-writing">
+                <span class="lang-es">Leer &rarr;</span><span class="lang-en">Read &rarr;</span>
+              </a>
+            </article>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Writing Section -->
+
+
+    <!-- ======= Research Section ======= -->
+    <section id="research" class="research section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Research</h2>
+          <p>
+            <span class="lang-es">Mi trabajo de investigación se mueve entre machine learning aplicado, adquisición de datos industriales, detección de anomalías y sistemas basados en modelos de lenguaje. Actualmente desarrollo investigación doctoral en Data Science en <strong>Universidad Loyola</strong>.</span>
+            <span class="lang-en">My research sits between applied machine learning, industrial data acquisition, anomaly detection, and language-model-based systems. I'm currently pursuing doctoral research in Data Science at <strong>Universidad Loyola</strong>.</span>
+          </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 mb-4" data-aos="fade-up">
+            <article class="research-card">
+              <div class="research-type mb-2">Paper · Zenodo · 2025</div>
+              <h3>Agentic Retrieval-Augmented Generation for Industrial Anomaly Detection</h3>
+              <p>
+                <span class="lang-es">Arquitectura agentic RAG para detección de anomalías en entornos industriales, combinando recuperación de contexto y razonamiento autónomo.</span>
+                <span class="lang-en">Agentic RAG architecture for anomaly detection in industrial environments, combining context retrieval and autonomous reasoning.</span>
+              </p>
+              <a href="https://doi.org/10.5281/zenodo.15121938" target="_blank" rel="noopener" class="btn-research">
+                <span class="lang-es">Ver paper &rarr;</span><span class="lang-en">View paper &rarr;</span>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <article class="research-card">
+              <div class="research-type mb-2">Paper · arXiv · 2025</div>
+              <h3>Smart Sampling Strategies for Wireless Industrial Data Acquisition</h3>
+              <p>
+                <span class="lang-es">Estrategias de muestreo adaptativo para adquisición inalámbrica de datos industriales, reduciendo carga de transmisión sin pérdida de información relevante.</span>
+                <span class="lang-en">Adaptive sampling strategies for wireless industrial data acquisition, reducing transmission load without losing relevant information.</span>
+              </p>
+              <a href="https://doi.org/10.48550/arXiv.2502.17454" target="_blank" rel="noopener" class="btn-research">
+                <span class="lang-es">Ver en arXiv &rarr;</span><span class="lang-en">View on arXiv &rarr;</span>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-lg-6 mb-4" data-aos="fade-up">
+            <article class="research-card">
+              <div class="research-type mb-2">Paper · ResearchGate · 2025</div>
+              <h3>Machine Learning-based Control Techniques versus Traditional PID Controllers</h3>
+              <p>
+                <span class="lang-es">Revisión sistemática comparando técnicas de control basadas en ML frente a esquemas PID clásicos en sistemas de control industrial.</span>
+                <span class="lang-en">A systematic review comparing ML-based control techniques against classical PID schemes in industrial control systems.</span>
+              </p>
+              <a href="https://www.researchgate.net/profile/Marcos-Soto-3" target="_blank" rel="noopener" class="btn-research">
+                <span class="lang-es">Ver en ResearchGate &rarr;</span><span class="lang-en">View on ResearchGate &rarr;</span>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <article class="research-card">
+              <div class="research-type mb-2">Conference Paper · ADIPEC 2019 · SPE-197583-MS</div>
+              <h3>Field Testing an Accurate, Non-nuclear, Inline Wet Gas Multiphase Meter</h3>
+              <p>
+                <span class="lang-es">Co-autor de paper presentado en ADIPEC 2019 sobre medición multifásica de gas húmedo sin fuentes nucleares.</span>
+                <span class="lang-en">Co-author of a paper presented at ADIPEC 2019 on non-nuclear wet-gas multiphase measurement.</span>
+              </p>
+              <a href="https://doi.org/10.2118/197583-MS" target="_blank" rel="noopener" class="btn-research">
+                <span class="lang-es">Ver paper &rarr;</span><span class="lang-en">View paper &rarr;</span>
+              </a>
+            </article>
+          </div>
+
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-12" data-aos="fade-up">
+            <div class="research-profiles">
+              <p><strong><span class="lang-es">Perfiles académicos:</span><span class="lang-en">Academic profiles:</span></strong></p>
+              <div class="d-flex flex-wrap gap-3 mt-2">
+                <a href="https://www.researchgate.net/profile/Marcos-Soto-3" target="_blank" rel="noopener" class="btn-profile">ResearchGate</a>
+                <a href="https://orcid.org/0009-0000-5787-5965" target="_blank" rel="noopener" class="btn-profile">ORCID</a>
+                <a href="https://github.com/marcosdh1987" target="_blank" rel="noopener" class="btn-profile">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Research Section -->
+
+
+    <!-- ======= Projects Section ======= -->
+    <section id="projects" class="projects">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>
+            <span class="lang-es">Capacidades y áreas de trabajo aplicado. No una lista exhaustiva, sino las líneas que definen cómo abordo problemas reales.</span>
+            <span class="lang-en">Capabilities and areas of applied work. Not an exhaustive list, but the lines that define how I approach real problems.</span>
+          </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 mb-4" data-aos="fade-up">
+            <div class="project-card">
+              <div class="project-icon"><i class="bi bi-cpu"></i></div>
+              <h3><span class="lang-es">LLM Systems en producción</span><span class="lang-en">LLM Systems in production</span></h3>
+              <p>
+                <span class="lang-es">Diseño de arquitecturas con foco en evaluación, observabilidad, costo y trazabilidad. Especialmente en escenarios donde una PoC tiene que convertirse en producto: pipelines de RAG, guardrails, evaluación continua y CI/CD para prompts.</span>
+                <span class="lang-en">Architecture design focused on evaluation, observability, cost, and traceability — especially for scenarios where a PoC must become a product: RAG pipelines, guardrails, continuous evaluation, and CI/CD for prompts.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card">
+              <div class="project-icon"><i class="bi bi-lightning-charge"></i></div>
+              <h3><span class="lang-es">Distillation y small models</span><span class="lang-en">Distillation and small models</span></h3>
+              <p>
+                <span class="lang-es">Especialización de modelos más pequeños para ganar velocidad, privacidad y control operacional. Casos de teacher-student, fine-tuning con datos sintéticos y despliegue local sin depender de frontier models ni APIs externas.</span>
+                <span class="lang-en">Specializing smaller models to gain speed, privacy, and operational control. Teacher-student setups, fine-tuning with synthetic data, and local deployment without relying on frontier models or external APIs.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4" data-aos="fade-up">
+            <div class="project-card">
+              <div class="project-icon"><i class="bi bi-graph-up"></i></div>
+              <h3><span class="lang-es">Industrial AI y telemetría</span><span class="lang-en">Industrial AI and telemetry</span></h3>
+              <p>
+                <span class="lang-es">Trabajo aplicado sobre adquisición de datos, sampling eficiente, detección de anomalías y modelado en contextos industriales. Base en entornos de campo con tolerancia a fallas, constraints físicos y evidencia empírica antes de escalar.</span>
+                <span class="lang-en">Applied work on data acquisition, efficient sampling, anomaly detection, and modeling in industrial contexts. Grounded in field environments with fault tolerance, physical constraints, and empirical evidence before scaling.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card">
+              <div class="project-icon"><i class="bi bi-shield-check"></i></div>
+              <h3><span class="lang-es">AI para HealthTech y entornos sensibles</span><span class="lang-en">AI for HealthTech and sensitive environments</span></h3>
+              <p>
+                <span class="lang-es">Implementaciones con foco en seguridad, privacidad, estructura de salida y validación. Conversaciones técnicas sobre cómo operar IA en sectores donde el error tiene consecuencias reales: salud, finanzas y peritaje judicial.</span>
+                <span class="lang-en">Implementations focused on security, privacy, structured output, and validation. Technical conversations on operating AI in sectors where errors have real consequences: healthcare, finance, and forensic expert work.</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Projects Section -->
+
+
+    <!-- ======= Experience Section ======= -->
+    <section id="experience" class="experience section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Experience</h2>
+        </div>
+
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Marcos Soto</h4>
-              <p><em>Machine Learning and MLOps Engineer with over 16 years of experience in IT (energy, finance, education). Currently ML Engineer Manager at Xmartlabs, leading AI initiatives and mentoring global teams. Independent Consultant and Technical Expert providing custom AI solutions, cloud architecture consulting and judicial expert assessments. PhD in Data Science in progress.</em></p>
-              <ul>
-                <li>Neuquen, Neuquen</li>
-                <li>(+54) 9 299 4182614</li>
-                <li>marcos.esteban.soto@gmail.com</li>
-              </ul>
+            <h3 class="resume-title"><span class="lang-es">Trayectoria</span><span class="lang-en">Career</span></h3>
+
+            <div class="resume-item">
+              <h4>ML Engineering Manager</h4>
+              <h5><span class="lang-es">Mayo 2025 – Presente</span><span class="lang-en">May 2025 – Present</span></h5>
+              <p><em>Xmartlabs · Remote (US &amp; Uruguay)</em></p>
+              <div class="lang-es">
+                <ul>
+                  <li>Liderazgo del equipo de ML Engineers, diseño de soluciones estratégicas de IA y estándares de excelencia técnica.</li>
+                  <li>Coordinación con clientes, optimización de pipelines MLOps y prácticas CI/CD.</li>
+                  <li>Mentoring, workshops técnicos y procesos de hiring.</li>
+                </ul>
+              </div>
+              <div class="lang-en">
+                <ul>
+                  <li>Leading the ML Engineers team, designing strategic AI solutions and setting technical excellence standards.</li>
+                  <li>Coordinating with clients, optimizing MLOps pipelines and CI/CD practices.</li>
+                  <li>Mentoring, technical workshops and hiring processes.</li>
+                </ul>
+              </div>
             </div>
 
-            <h3 class="resume-title">Education</h3>
             <div class="resume-item">
-              <h4>PhD in Data Science</h4>
-              <h5>2023 - Present</h5>
-              <p><em>Universidad Loyola</em></p>
-              <p>Combining research and practical application in Machine Learning and Data Science</p>
+              <h4>Lead Sr. ML Engineer · Data Expert I</h4>
+              <h5><span class="lang-es">Enero 2024 – Mayo 2025</span><span class="lang-en">January 2024 – May 2025</span></h5>
+              <p><em>Qubika · Remote (US)</em></p>
+              <div class="lang-es">
+                <ul>
+                  <li>Excelencia técnica en proyectos Data &amp; AI para clientes como Bayview y Harvard Management Company.</li>
+                  <li>Entrevistas técnicas, mentoring de MLEs y workshops internos.</li>
+                </ul>
+              </div>
+              <div class="lang-en">
+                <ul>
+                  <li>Technical excellence in Data &amp; AI projects for clients like Bayview and Harvard Management Company.</li>
+                  <li>Technical interviews, MLE mentoring, and internal workshops.</li>
+                </ul>
+              </div>
             </div>
-            <div class="resume-item">
-              <h4>International MBA</h4>
-              <h5>2021</h5>
-              <p><em>MCA Business & Postgraduate School</em></p>
-              <p></p>
-            </div>
-            <div class="resume-item">
-              <h4>Master of Big Data &amp; Business Intelligence</h4>
-              <h5>2019-2020</h5>
-              <p><em>ENEB School of Business, Barcelona</em></p>
-              <p></p>
-            </div>
-            <div class="resume-item">
-              <h4>Bachelor of Science in System Engineering</h4>
-              <h5>2013 - 2019</h5>
-              <p><em>UnDef - Universidad de la Defensa Nacional, Cordoba, Argentina</em></p>
-              <p></p>
-            </div>
-            <div class="resume-item">
-              <h4>Bachelor Associate in Network &amp; Data Communication</h4>
-              <h5>2010 - 2012</h5>
-              <p><em>IFES - Instituto de Formacion Superior, Neuquen, Argentina</em></p>
-              <p></p>
-            </div>
-            <div class="resume-item">
-              <h4>Electronics Technician</h4>
-              <h5>2000 - 2005</h5>
-              <p><em>EPET 14</em></p>
-              <p></p>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>ML Engineer Manager</h4>
-              <h5>May 2025 - Present</h5>
-              <p><em>Xmartlabs, Remote (US & Uruguay)</em></p>
-              <ul>
-                <li>Leading the ML Engineers team, designing strategic AI solutions and establishing technical excellence standards.</li>
-                <li>Coordinating project integration with key clients, optimizing MLOps pipelines and promoting CI/CD best practices.</li>
-                <li>Mentoring and continuous training: talks, workshops and technical hiring process.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>AI Consultant & Computer Expert</h4>
-              <h5>November 2019 - Present</h5>
-              <p><em>Professional Registration Superior Court of Justice, Neuquen, Argentina</em></p>
-              <ul>
-                <li>Forensic expert assessments: computer evidence analysis, data extraction for litigation.</li>
-                <li>IT Consulting: on-premises and cloud architecture design (AWS, Azure, GCP), complex model consulting and cryptocurrency mining hardware.</li>
-                <li>Technical reports and expert presentations development.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Lead Sr. ML Engineer | Data Expert I</h4>
-              <h5>January 2024 - May 2025</h5>
-              <p><em>Qubika, Remote (US)</em></p>
-              <ul>
-                <li>Technical excellence assurance in Data & AI projects for clients like Bayview and Harvard Management Company.</li>
-                <li>Conducting technical interviews and active participation in selection processes.</li>
-                <li>MLEs mentoring and knowledge dissemination through internal workshops.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Sr. Machine Learning Engineer II</h4>
-              <h5>June 2023 - January 2024</h5>
-              <p><em>Qubika, Remote (US)</em></p>
-              <ul>
-                <li>Design and implementation of end-to-end architectures for generative AI models and GPU optimization.</li>
-                <li>Production deployments on AWS and Azure, focusing on performance and scalability.</li>
-              </ul>
-            </div>
+
             <div class="resume-item">
               <h4>Sr. Machine Learning Engineer</h4>
-              <h5>April 2022 - July 2023</h5>
-              <p><em>Konfio, Remote (Mexico)</em></p>
-              <ul>
-                <li>Research and development of batch and real-time models.</li>
-                <li>Creation of reusable templates to standardize ML production.</li>
-                <li>Infrastructure management with Terraform and AWS.</li>
-              </ul>
+              <h5><span class="lang-es">Abril 2022 – Enero 2024</span><span class="lang-en">April 2022 – January 2024</span></h5>
+              <p><em>Konfio · Remote (<span class="lang-es">México</span><span class="lang-en">Mexico</span>)</em></p>
+              <div class="lang-es">
+                <ul>
+                  <li>Investigación y desarrollo de modelos batch y real-time.</li>
+                  <li>Infraestructura con Terraform y AWS; templates reutilizables para ML en producción.</li>
+                </ul>
+              </div>
+              <div class="lang-en">
+                <ul>
+                  <li>Research and development of batch and real-time models.</li>
+                  <li>Infrastructure with Terraform and AWS; reusable templates for ML in production.</li>
+                </ul>
+              </div>
             </div>
+
             <div class="resume-item">
               <h4>Sr. Machine Learning Engineer</h4>
-              <h5>2021 - 2022</h5>
-              <p><em>Prisma Medios de Pagos S.A., Buenos Aires, Argentina - Remote</em></p>
-              <ul>
-                <li>Implementation of ML models in AWS SageMaker.</li>
-                <li>Integration with business areas for customized solutions.</li>
-              </ul>
+              <h5>2021 – 2022</h5>
+              <p><em>Prisma Medios de Pagos · Buenos Aires, Argentina</em></p>
+              <div class="lang-es">
+                <ul><li>Implementación de modelos ML en AWS SageMaker.</li></ul>
+              </div>
+              <div class="lang-en">
+                <ul><li>Deployed ML models on AWS SageMaker.</li></ul>
+              </div>
             </div>
+
             <div class="resume-item">
               <h4>Field Operations Engineer III</h4>
-              <h5>2013 - 2021</h5>
-              <p><em>Weatherford International, Argentina, Bolivia, Brazil, Chile</em></p>
-              <ul>
-                <li>Technical leadership in flow measurement operations.</li>
-                <li>Development of ML-assisted measurement models end-to-end for large volumes of field data.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12" data-aos="fade-up">
-            <h3 class="resume-title">Teaching Experience</h3>
-            <div class="resume-item">
-              <h4>Professor & Development Manager</h4>
-              <h5>April 2022 - August 2022</h5>
-              <p><em>ITBA Escuela de Innovación, Neuquen, Argentina</em></p>
-              <ul>
-                <li>FullStack Developer training course, teaching HTML, CSS, JS, Python, SQL and Django.</li>
-                <li>Design and execution of academic programs for technical training.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12" data-aos="fade-up">
-            <h3 class="resume-title">Research Contributions and Publications</h3>
-            <div class="resume-item">
-              <h4>Recent Publications</h4>
-              <ul>
-                <li>Paper "Agentic Retrieval-Augmented Generation for Industrial Anomaly Detection" <a href="https://doi.org/10.5281/zenodo.15121938">https://doi.org/10.5281/zenodo.15121938</a></li>
-                <li>Paper "Smart Sampling Strategies for Wireless Industrial Data Acquisition" <a href="https://doi.org/10.48550/arXiv.2502.17454">https://doi.org/10.48550/arXiv.2502.17454</a></li>
-                <li>"Automation of field equipment for automatic well testing using a recurrent Neural Network." Thesis project with practical application in well testing automation.</li>
-                <li>"Field Testing an Accurate, Non-nuclear, Inline Wet Gas Multiphase Meter" (ADIPEC 2019, SPE-197583-MS). Co-author of paper presented at international conference. <a href="https://doi.org/10.2118/197583-MS">https://doi.org/10.2118/197583-MS</a></li>
-                <li>Currently developing research in Machine Learning and Data Science as part of PhD studies.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12" data-aos="fade-up">
-            <h3 class="resume-title">Featured Projects</h3>
-            <div class="resume-item">
-              <ul>
-                <li>Automation of field equipment for automatic well testing using recurrent neural networks.</li>
-                <li>Leadership in generative artificial intelligence projects in audio and LLM architectures in cloud environments.</li>
-                <li>Implementation of a non-nuclear wet gas multiphase measurement system for the gas industry.</li>
-                <li>AI-based assistants for different companies, including Harvard University's business division in the United States.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Resume Section -->
-
-
-    <!-- ======= Services Section ======= -->
-    <!-- <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-brightness-high"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-          </div>
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Services Section -->
-
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="section-title">
-          <h2>Acknowledgments and awards</h2>
-          <p></p>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <p>
+              <h5>2013 – 2021</h5>
+              <p><em>Weatherford International · Argentina, Bolivia, <span class="lang-es">Brasil</span><span class="lang-en">Brazil</span>, Chile</em></p>
+              <div class="lang-es">
                 <ul>
-                  <li>
-                    <a href="https://doi.org/10.5281/zenodo.15121938">Paper "Agentic Retrieval-Augmented Generation for Industrial Anomaly Detection"</a>
-                  </li>
-                  <li>
-                    <a href="https://doi.org/10.48550/arXiv.2502.17454">Paper "Smart Sampling Strategies for Wireless Industrial Data Acquisition"</a>
-                  </li>
-                  <li>
-                    <a href="https://www.ie.edu/es/fundacion-ie/">Santander IE Online Learning Journey for Learners Scholarship</a>
-                  </li>
-                  <li>
-                    <a href="Certifications/Adipec Paper.pdf">Co-Author Paper Presented at ADIPEC 2019, Field Testing an Accurate, Non-nuclear, Inline Wet Gas Multiphase Meter. SPE-197583-MS</a>
-                  </li>
-                  <li>
-                    <a href="https://www.theforage.com/virtual-internships/prototype/ThbphD5N5WRsd9Mxo/Digital-Technology-(Data-Analytics)-Virtual-Experience-Program">GE Virtual Internship – Digital Technology Data Analytics Program.</a>
-                  </li>
-                  <li>
-                    <a href="https://www.theforage.com/virtual-internships/prototype/NkaC7knWtjSbi6aYv/Data%20Analytics%20Virtual%20Experience%20Program">Quantium Virtual Internship – Data Analytics Virtual Experience Program.</a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com/posts/marcosesoto_deeplearning-welltesting-flowmeasurements-activity-6625918545890951168-fG1R?utm_source=linkedin_share&utm_medium=member_desktop_web">Automation of field equipment for automatic well testing using a recurrent Neural Network, degree work.</a>
-                  </li>
+                  <li>Liderazgo técnico en operaciones de medición de flujo.</li>
+                  <li>Desarrollo de modelos ML para grandes volúmenes de datos de campo.</li>
                 </ul>
-
-
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6625916627558912000?compact=1" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-
+              </div>
+              <div class="lang-en">
+                <ul>
+                  <li>Technical leadership in flow measurement operations.</li>
+                  <li>Development of ML models for large volumes of field data.</li>
+                </ul>
+              </div>
             </div>
 
           </div>
 
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title"><span class="lang-es">Educación</span><span class="lang-en">Education</span></h3>
 
+            <div class="resume-item">
+              <h4><span class="lang-es">PhD en Data Science</span><span class="lang-en">PhD in Data Science</span></h4>
+              <h5>2023 – <span class="lang-es">Presente</span><span class="lang-en">Present</span></h5>
+              <p><em>Universidad Loyola</em></p>
+            </div>
+
+            <div class="resume-item">
+              <h4><span class="lang-es">MBA Internacional</span><span class="lang-en">International MBA</span></h4>
+              <h5>2021</h5>
+              <p><em>MCA Business &amp; Postgraduate School</em></p>
+            </div>
+
+            <div class="resume-item">
+              <h4><span class="lang-es">Master en Big Data &amp; Business Intelligence</span><span class="lang-en">Master in Big Data &amp; Business Intelligence</span></h4>
+              <h5>2019 – 2020</h5>
+              <p><em>ENEB School of Business, Barcelona</em></p>
+            </div>
+
+            <div class="resume-item">
+              <h4><span class="lang-es">Ingeniería en Sistemas</span><span class="lang-en">Bachelor in Systems Engineering</span></h4>
+              <h5>2013 – 2019</h5>
+              <p><em>UnDef – Universidad de la Defensa Nacional, Córdoba</em></p>
+            </div>
+
+            <h3 class="resume-title mt-4"><span class="lang-es">Docencia</span><span class="lang-en">Teaching</span></h3>
+            <div class="resume-item">
+              <h4>Professor &amp; Development Manager</h4>
+              <h5><span class="lang-es">Abril – Agosto 2022</span><span class="lang-en">April – August 2022</span></h5>
+              <p><em>ITBA Escuela de Innovación, Neuquén</em></p>
+              <div class="lang-es"><ul><li>Curso FullStack: HTML, CSS, JS, Python, SQL y Django.</li></ul></div>
+              <div class="lang-en"><ul><li>FullStack course: HTML, CSS, JS, Python, SQL and Django.</li></ul></div>
+            </div>
+
+            <h3 class="resume-title mt-4"><span class="lang-es">Consultoría</span><span class="lang-en">Consulting</span></h3>
+            <div class="resume-item">
+              <h4>AI Consultant &amp; Computer Expert</h4>
+              <h5><span class="lang-es">Noviembre 2019 – Presente</span><span class="lang-en">November 2019 – Present</span></h5>
+              <p><em><span class="lang-es">Registro Superior Tribunal de Justicia, Neuquén</span><span class="lang-en">Superior Court of Justice Registry, Neuquén</span></em></p>
+              <div class="lang-es">
+                <ul><li>Peritajes forenses, análisis de evidencia digital, consultoría de arquitectura cloud (AWS, Azure, GCP).</li></ul>
+              </div>
+              <div class="lang-en">
+                <ul><li>Forensic expertise, digital evidence analysis, cloud architecture consulting (AWS, Azure, GCP).</li></ul>
+              </div>
+            </div>
+
+          </div>
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section><!-- End Experience Section -->
+
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
+
         <div class="section-title">
-          <h2>
-            Licenses and certifications</h2>
-          <p></p>
+          <h2>Contact</h2>
+          <p>
+            <span class="lang-es">Si organizás un evento, una charla para equipo interno, una conversación técnica o una colaboración entre industria y academia, escribime. Lo ideal es incluir tres cosas en el mensaje: <strong>tema, audiencia y formato</strong>.</span>
+            <span class="lang-en">If you're organizing an event, an internal team talk, a technical conversation, or a collaboration between industry and academia, get in touch. Please include three things in your message: <strong>topic, audience, and format</strong>.</span>
+          </p>
         </div>
 
         <div class="row" data-aos="fade-in">
-          <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="col-lg-6">
             <div class="info">
-              <h5>Licenses and Certifications</h5>
-              <li>
-              <strong>Data Science & ML Certifications:</strong> TensorFlow, Deep Learning, Feature Engineering, ML for Time Series
-              </li>
-              <li>
-              <strong>Google Cloud Platform Big Data and ML Fundamentals</strong> – Coursera (2020)
-              </li>
-              <li>
-              <strong>Machine Learning Scientist</strong> – DataCamp (2019-2020)
-              </li>
-              <li>
-                <strong>International MBA</strong> - Master of Business Administration – MCA Business & Postgraduate School (2021)
-              </li>
-              <li>
-              <strong>Flow Measurements Advanced</strong> – Weatherford, Houston Tx (USA - 2017)
-            </li>
-            <li>
-            <strong>Cygnet Scada Platform</strong> – Weatherford, Houston Tx (USA - 2019)
-          </li>
-          <li>
-              <strong>Cygnet Flow Measurement</strong> – Weatherford, Houston Tx (USA - 2019)
-            </li>
-            <li>
-              <strong>Schneider Telemetry Expert</strong> – Schneider Electric, Sao Paulo (BRA - 2019)
-            </li>
-            <li>
-              <strong>Well Testing Reo Well Simulation</strong> – Weatherford, Houston Tx (USA - 2018)
-            </li>
-            <li>
-              <strong>Coaching Ontological Professional</strong> – Idear, Neuquen (2018-2019)
-            </li>
-            <li>
-              <strong>PVT Flex Simulator</strong> – Weatherford, Houston Tx (USA - 2018)
-            </li>
-            <li>
-              <strong>Flow Measurements Basics</strong> – Weatherford, Abu Dhabi (USA - 2017)
-            </li>
-            <li>
-              <strong>Roxar Sand Monitor</strong> – Emerson, Houston Tx (USA - 2016)
-            </li>
-            <li>
-              <strong>Well Testing</strong> – Weatherford (2013)
-            </li>
-            <li>
-              <strong>Networking</strong> – Cisco CCNA Courses 1 to 4. (2012)
-            </li>
-            <li>
-              <strong>VMWare Virtualization</strong> (2012)
-            </li>
-            <li>
-              <strong>Microsoft Virtualization (Hyper-V)</strong> (2011)
-            </li>
-            <li>
-              <strong>Windows Server 2008</strong> (2011)
-            </li>
-            <li>
-              <strong>Microsoft SQL Server</strong> (2011)
-            </li>
-            </p>
-              
+              <div class="contact-item">
+                <i class="bi bi-envelope"></i>
+                <a href="mailto:marcos.esteban.soto@gmail.com">marcos.esteban.soto@gmail.com</a>
+              </div>
+              <div class="contact-item mt-3">
+                <i class="bi bi-linkedin"></i>
+                <a href="https://www.linkedin.com/in/marcosesoto/" target="_blank" rel="noopener">linkedin.com/in/marcosesoto</a>
+              </div>
+              <div class="contact-item mt-3">
+                <i class="bi bi-github"></i>
+                <a href="https://github.com/marcosdh1987" target="_blank" rel="noopener">github.com/marcosdh1987</a>
+              </div>
+              <div class="contact-item mt-3">
+                <i class="bi bi-person-badge"></i>
+                <a href="https://orcid.org/0009-0000-5787-5965" target="_blank" rel="noopener">ORCID: 0009-0000-5787-5965</a>
+              </div>
+              <div class="contact-item mt-3">
+                <i class="bi bi-book"></i>
+                <a href="https://www.researchgate.net/profile/Marcos-Soto-3" target="_blank" rel="noopener">ResearchGate: Marcos-Soto-3</a>
+              </div>
             </div>
-
           </div>
-
-
+          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up">
+            <div class="contact-note">
+              <h4><span class="lang-es">Para organizadores de eventos</span><span class="lang-en">For event organizers</span></h4>
+              <div class="lang-es">
+                <p>Hablo sobre IA en producción, LLM systems, small models y research aplicada. Disponible en español e inglés, en formato keynote, panel o charla técnica de 20 a 45 minutos.</p>
+                <p class="mt-2">Para revisar el detalle de cada charla antes de escribir, visitá la sección <a href="#talks">Talks</a>.</p>
+              </div>
+              <div class="lang-en">
+                <p>I speak on production AI, LLM systems, small models, and applied research. Available in Spanish and English, as keynotes, panels, or technical talks from 20 to 45 minutes.</p>
+                <p class="mt-2">To review each talk in detail before reaching out, visit the <a href="#talks">Talks</a> section.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -492,17 +724,10 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        &copy; 2025 <strong><span>Marcos Esteban Soto</span></strong>
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -515,7 +740,6 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

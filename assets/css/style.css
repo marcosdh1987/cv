@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/bg1.jpg") top center;
+  background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
 }
 #hero:before {
@@ -951,4 +951,485 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+/*--------------------------------------------------------------
+# Bilingual (ES/EN) Toggle
+--------------------------------------------------------------*/
+html[lang="en"] .lang-es,
+html[lang="es"] .lang-en {
+  display: none !important;
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.lang-btn {
+  padding: 4px 14px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Open Sans", sans-serif;
+}
+
+.lang-btn:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.lang-btn.active {
+  background: #149ddd;
+  color: #fff;
+  border-color: #149ddd;
+}
+
+/*--------------------------------------------------------------
+# Talk Page Hero (prominent header for talk detail pages)
+--------------------------------------------------------------*/
+.talk-page-hero {
+  background: linear-gradient(135deg, #0e2442 0%, #149ddd 100%);
+  color: #fff;
+  padding: 80px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.talk-page-hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.talk-page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.talk-page-hero .breadcrumb-trail {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+.talk-page-hero .breadcrumb-trail a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.talk-page-hero .breadcrumb-trail a:hover {
+  color: #fff;
+}
+
+.talk-page-hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.talk-page-hero .talk-meta {
+  margin-top: 16px;
+}
+
+.talk-page-hero .talk-tag {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+  .talk-page-hero {
+    padding: 50px 0 40px;
+  }
+  .talk-page-hero h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# Hero CTAs & Credibility Strip
+--------------------------------------------------------------*/
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-hero:hover {
+  background: #149ddd;
+  border-color: #149ddd;
+  color: #fff;
+}
+
+.credibility-strip {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.credibility-strip span {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/*--------------------------------------------------------------
+# Shared Card Styles (Talks, Writing, Research, Projects)
+--------------------------------------------------------------*/
+.talk-card,
+.writing-card,
+.research-card,
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s;
+}
+
+.talk-card:hover,
+.writing-card:hover,
+.research-card:hover,
+.project-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.talk-card h3,
+.writing-card h3,
+.research-card h3,
+.project-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #272829;
+}
+
+.talk-card p,
+.writing-card p,
+.research-card p {
+  font-size: 0.93rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.talk-audience {
+  font-size: 0.88rem;
+  color: #777;
+}
+
+/*--------------------------------------------------------------
+# Talks Section
+--------------------------------------------------------------*/
+.talks {
+  padding: 60px 0;
+}
+
+.talk-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.talk-tag {
+  background: #e8f4fd;
+  color: #149ddd;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.btn-talk {
+  display: inline-block;
+  padding: 7px 18px;
+  background: #149ddd;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-talk:hover {
+  background: #0d7ab5;
+  color: #fff;
+}
+
+.btn-talk-secondary {
+  display: inline-block;
+  padding: 7px 18px;
+  background: #f2f5f9;
+  color: #149ddd;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.3s;
+  margin-top: 8px;
+}
+
+.btn-talk-secondary:hover {
+  background: #e0ecf7;
+  color: #0d7ab5;
+}
+
+.talk-contact-cta {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/*--------------------------------------------------------------
+# Writing Section
+--------------------------------------------------------------*/
+.writing {
+  padding: 60px 0;
+}
+
+.writing-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #149ddd;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.btn-writing {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #149ddd;
+}
+
+.btn-writing:hover {
+  color: #0d7ab5;
+}
+
+/*--------------------------------------------------------------
+# Research Section
+--------------------------------------------------------------*/
+.research {
+  padding: 60px 0;
+}
+
+.research-type {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.btn-research {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #149ddd;
+}
+
+.btn-research:hover {
+  color: #0d7ab5;
+}
+
+.research-profiles {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.btn-profile {
+  display: inline-block;
+  padding: 7px 18px;
+  background: #f2f5f9;
+  color: #149ddd;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-profile:hover {
+  background: #e0ecf7;
+  color: #0d7ab5;
+}
+
+/*--------------------------------------------------------------
+# Projects Section
+--------------------------------------------------------------*/
+.projects {
+  padding: 60px 0;
+}
+
+.project-icon {
+  font-size: 2rem;
+  color: #149ddd;
+  margin-bottom: 12px;
+}
+
+/*--------------------------------------------------------------
+# Experience Section
+--------------------------------------------------------------*/
+.experience {
+  padding: 60px 0;
+}
+
+/*--------------------------------------------------------------
+# Contact Section — updated
+--------------------------------------------------------------*/
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+  color: #149ddd;
+  flex-shrink: 0;
+}
+
+.contact-note {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 24px 28px;
+  border-left: 4px solid #149ddd;
+}
+
+.contact-note h4 {
+  color: #272829;
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
+# Talk Detail Page
+--------------------------------------------------------------*/
+.talk-detail {
+  padding: 40px 0 60px;
+}
+
+.talk-detail h1 {
+  font-size: 1.8rem;
+  color: #272829;
+  line-height: 1.35;
+}
+
+.talk-detail h3 {
+  font-size: 1.15rem;
+  color: #149ddd;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.talk-detail ul {
+  padding-left: 1.2rem;
+}
+
+.talk-detail ul li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.format-card {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 18px;
+  height: 100%;
+  border-top: 3px solid #149ddd;
+}
+
+.format-card h5 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #272829;
+}
+
+.format-card p {
+  font-size: 0.88rem;
+  color: #666;
+  margin: 0;
+}
+
+.talk-sidebar {
+  position: sticky;
+  top: 80px;
+}
+
+.sidebar-block {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.sidebar-block h4 {
+  font-size: 1rem;
+  margin-bottom: 14px;
+  color: #272829;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.sidebar-list li i {
+  color: #149ddd;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.talk-related ul {
+  padding-left: 1.2rem;
+}
+
+.talk-related ul li {
+  margin-bottom: 8px;
+}
+
+.talk-related ul li a {
+  font-size: 0.93rem;
 }
