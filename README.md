@@ -1,27 +1,20 @@
-# cv
-Curriculum Vitae
-## Getting started
+# Applied AI Systems Portfolio
 
-Make sure you have installed
+Professional research and engineering portfolio for Marcos Esteban Soto.
 
-- [Python 3.7+](https://www.python.org/downloads/)
+The site presents work in Industrial AI, computer vision, edge AI, digital twins, industrial telemetry, machine-learning systems, and cyber-physical systems. It is a bilingual static site published at [marcosdh1987.github.io/cv](https://marcosdh1987.github.io/cv/).
 
+## Local preview
 
-## Usage
+Serve the repository root with any static HTTP server, then open `index.html`. The site has no build step.
 
-- WebPage : [link](https://marcosdh1987.github.io/cv/)
+## Content structure
 
-## Installation
+- Applied AI research themes
+- EdgeDACS applied research platform
+- Reusable open-source engineering resources
+- Publications and doctoral research
+- Conference talks
+- Professional experience and education
 
-Make sure you have your git configurated, you can check this by executing the next command
-
-```sh
-git configure
-```
-
-Setup your workspace:
-
-```sh
-git clone https://github.com/marcosdh1987/cv.git
-cd cv
-```
+Active research, sensitive data, experimental configurations, and unpublished industrial work remain private.
