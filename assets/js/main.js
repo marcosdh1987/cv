@@ -296,4 +296,85 @@
     }
   })();
 
+  /**
+   * EdgeDACS Video Demonstration Modal Controller
+   */
+  (function() {
+    const videoData = {
+      scada: {
+        src: 'assets/video/scada_dacs-demo-ensayo-pozo-control.mp4',
+        tagEs: 'Digital Twin · SCADA Real · PLC Link',
+        tagEn: 'Digital Twin · Real SCADA · PLC Link',
+        titleEs: 'SCADA Industrial & Digital Twin para Ensayo de Pozos (2:16 min)',
+        titleEn: 'Industrial SCADA & Digital Twin for Well Testing (2:16 min)',
+        descEs: 'Operación de separador trifásico con balance de masa dinámico, gas real (Dranchuk-Abou-Kassem), válvulas normadas IEC 60534, control PID y absorción de slugs.',
+        descEn: 'Three-phase separator operation with dynamic mass balance, Dranchuk-Abou-Kassem real gas, IEC 60534 control valves, PID loops, and slug damping.'
+      },
+      anomalias: {
+        src: 'assets/video/scada_dacs-demo-deteccion-anomalias.mp4',
+        tagEs: '3D Digital Twin · Edge ML · Fault Injection',
+        tagEn: '3D Digital Twin · Edge ML · Fault Injection',
+        titleEs: 'Detección de Anomalías Multivariables en Tiempo Real (1:18 min)',
+        titleEn: 'Real-Time Multivariate Anomaly Detection (1:18 min)',
+        descEs: 'Gemelo 3D con inyección de fallas en vivo y benchmarking de latencia: XGBoost (0.3 ms), Isolation Forest (5.2 ms), LSTM-AE (2.0 ms) y Gating a LLM.',
+        descEn: 'Interactive 3D digital twin with live fault injection and latency benchmarks: XGBoost (0.3 ms), Isolation Forest (5.2 ms), LSTM-AE (2.0 ms), and LLM Gating.'
+      }
+    };
+
+    function initVideoModal() {
+      const modalEl = document.getElementById('videoModal');
+      if (!modalEl || typeof bootstrap === 'undefined') return;
+
+      const player = document.getElementById('modalVideoPlayer');
+      const label = document.getElementById('videoModalLabel');
+      const tag = document.getElementById('modalVideoTag');
+      const desc = document.getElementById('modalVideoDesc');
+      let bsModal = null;
+
+      try {
+        bsModal = bootstrap.Modal.getOrCreateInstance(modalEl);
+      } catch (e) {
+        bsModal = new bootstrap.Modal(modalEl);
+      }
+
+      function openVideo(videoKey) {
+        const item = videoData[videoKey];
+        if (!item || !player) return;
+
+        const isEn = document.documentElement.lang === 'en';
+        tag.textContent = isEn ? item.tagEn : item.tagEs;
+        label.textContent = isEn ? item.titleEn : item.titleEs;
+        desc.textContent = isEn ? item.descEn : item.descEs;
+
+        player.src = item.src;
+        bsModal.show();
+        player.play().catch(function() {});
+      }
+
+      document.querySelectorAll('[data-video]').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+          const key = this.getAttribute('data-video');
+          if (key) {
+            e.preventDefault();
+            openVideo(key);
+          }
+        });
+      });
+
+      modalEl.addEventListener('hidden.bs.modal', function() {
+        if (player) {
+          player.pause();
+          player.removeAttribute('src');
+          player.load();
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initVideoModal);
+    } else {
+      initVideoModal();
+    }
+  })();
+
 })()

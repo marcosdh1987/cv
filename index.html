@@ -116,6 +116,7 @@
           anomaly detection, process control, and production AI.</span>
       </p>
       <div class="hero-cta">
+        <a href="#edgedacs-demos" class="btn-hero btn-hero-primary scrollto"><i class="bi bi-play-circle-fill"></i> <span class="lang-es">Ver demos en video</span><span class="lang-en">Watch demo videos</span></a>
         <a href="#writing" class="btn-hero scrollto"><span class="lang-es">Leer artículos</span><span
             class="lang-en">Read articles</span></a>
         <a href="#talks" class="btn-hero scrollto"><span class="lang-es">Ver charlas</span><span
@@ -161,7 +162,10 @@
                 explicación, sin asumir que un único enfoque resuelve todas las capas del problema.</span><span
                 class="lang-en">Comparing which models best detect an event and which add context or explanation,
                 without assuming that one approach solves every layer of the problem.</span></p>
-            <a href="https://doi.org/10.5281/zenodo.15121938" target="_blank" rel="noopener" class="btn-inline">Industrial Anomaly Detection &rarr;</a>
+            <div class="d-flex flex-wrap gap-2 align-items-center">
+              <a href="https://doi.org/10.5281/zenodo.15121938" target="_blank" rel="noopener" class="btn-inline">Industrial Anomaly Detection &rarr;</a>
+              <a href="#demo-anomalias" class="btn-demo-pill" data-video="anomalias"><i class="bi bi-play-circle-fill"></i> <span class="lang-es">Ver demo (1:18 min)</span><span class="lang-en">Watch demo (1:18 min)</span></a>
+            </div>
           </article>
           <article class="research-proof" data-aos="fade-up">
             <div class="research-proof-meta">Digital Twin · Intelligent Control</div>
@@ -171,9 +175,10 @@
                 campo.</span><span class="lang-en">A separator digital twin supports comparison of manual control, PID,
                 auto-tuning, and ML-assisted approaches under repeatable disturbances before moving toward field
                 validation.</span></p>
-            <div class="d-flex flex-wrap gap-3 align-items-center">
+            <div class="d-flex flex-wrap gap-2 align-items-center">
               <a href="https://www.researchgate.net/profile/Marcos-Soto-3" target="_blank" rel="noopener" class="btn-inline"><span class="lang-es">Ver investigación</span><span class="lang-en">View research</span> &rarr;</a>
               <a href="#separator-challenge" class="btn-inline scrollto"><span class="lang-es">Probar simulador</span><span class="lang-en">Try simulator</span> &rarr;</a>
+              <a href="#demo-scada" class="btn-demo-pill" data-video="scada"><i class="bi bi-play-circle-fill"></i> <span class="lang-es">Ver demo SCADA (2:16 min)</span><span class="lang-en">Watch SCADA demo (2:16 min)</span></a>
             </div>
           </article>
           <article class="research-proof" data-aos="fade-up" data-aos-delay="100">
@@ -251,6 +256,115 @@
             <li><strong><span class="lang-es">Método</span><span class="lang-en">Method</span></strong><span>Reproducible experiments · Comparable results</span></li>
           </ul>
         </article>
+
+        <div id="edgedacs-demos" class="edgedacs-demos-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="demos-heading">
+            <div class="demos-kicker"><i class="bi bi-camera-video-fill"></i><span class="lang-es">Demostraciones en video</span><span class="lang-en">Video demonstrations</span></div>
+            <h3 class="demos-title"><span class="lang-es">Sistemas Operativos en Demostración</span><span class="lang-en">Operational Systems in Action</span></h3>
+            <p class="demos-subtitle">
+              <span class="lang-es">Evidencia de ingeniería en ejecución: gemelos digitales, integración física con PLCs industriales y detección de anomalías híbrida en tiempo real con inyección de fallas.</span>
+              <span class="lang-en">Practical engineering evidence: digital twins, physical industrial PLC integration, and real-time hybrid anomaly detection with live fault injection.</span>
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Video 1: SCADA & Digital Twin -->
+            <div class="col-lg-6" id="demo-scada">
+              <article class="video-showcase-card">
+                <div class="video-thumb-container" data-video="scada" role="button" tabindex="0" aria-label="Reproducir video SCADA y Digital Twin">
+                  <img src="assets/img/demos/thumb-scada-control.jpg" alt="Demo SCADA y Digital Twin" class="video-thumb-img" loading="lazy">
+                  <div class="video-badge-top-left">
+                    <span class="badge-dot"></span>
+                    <span class="lang-es">SCADA Real + PLC</span><span class="lang-en">Real SCADA + PLC</span>
+                  </div>
+                  <div class="video-badge-bottom-right">
+                    <i class="bi bi-clock me-1"></i>02:16
+                  </div>
+                  <div class="video-thumb-overlay">
+                    <div class="video-play-btn" aria-hidden="true">
+                      <i class="bi bi-play-fill"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="video-showcase-body">
+                  <div class="video-showcase-tags">Industrial Automation · Digital Twin · Well Testing</div>
+                  <h4 class="video-showcase-title">
+                    <span class="lang-es">SCADA &amp; Digital Twin para Ensayo de Pozos</span>
+                    <span class="lang-en">SCADA &amp; Digital Twin for Well Testing</span>
+                  </h4>
+                  <p class="video-showcase-desc">
+                    <span class="lang-es">Demostración del sistema DACS funcionando como gemelo digital de investigación y como SCADA operativo con enlace a PLC. Integra modelo físico de separador trifásico con balance dinámico de masa, gas real (factor Z Dranchuk-Abou-Kassem), válvulas dimensionadas por IEC 60534, control de lazos PID y sincronización de tendencias multivariables ante slugs e interferencias.</span>
+                    <span class="lang-en">Demonstration of the DACS system operating as a research digital twin and an industrial SCADA linked to PLCs. Features a 3-phase test separator with dynamic mass balance, Dranchuk-Abou-Kassem real gas, IEC 60534 control valves, PID loop regulation, and multi-trend synchronization under slugging conditions.</span>
+                  </p>
+                  <div class="video-tech-pills">
+                    <span class="video-tech-pill">Digital Twin</span>
+                    <span class="video-tech-pill">PLC Link</span>
+                    <span class="video-tech-pill">IEC 60534</span>
+                    <span class="video-tech-pill">Gas Real Dranchuk</span>
+                    <span class="video-tech-pill">Control PID</span>
+                    <span class="video-tech-pill">Well Testing</span>
+                  </div>
+                  <div class="video-showcase-footer">
+                    <button type="button" class="btn-project btn-project-primary" data-video="scada">
+                      <i class="bi bi-play-circle-fill"></i>
+                      <span class="lang-es">Reproducir demo (2:16 min)</span>
+                      <span class="lang-en">Play demo (2:16 min)</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Video 2: Anomaly Detection -->
+            <div class="col-lg-6" id="demo-anomalias">
+              <article class="video-showcase-card">
+                <div class="video-thumb-container" data-video="anomalias" role="button" tabindex="0" aria-label="Reproducir video Detección de Anomalías">
+                  <img src="assets/img/demos/thumb-anomalias.jpg" alt="Demo Detección de Anomalías" class="video-thumb-img" loading="lazy">
+                  <div class="video-badge-top-left">
+                    <span class="badge-dot"></span>
+                    <span class="lang-es">3D Twin + Hybrid AI</span><span class="lang-en">3D Twin + Hybrid AI</span>
+                  </div>
+                  <div class="video-badge-bottom-right">
+                    <i class="bi bi-clock me-1"></i>01:18
+                  </div>
+                  <div class="video-thumb-overlay">
+                    <div class="video-play-btn" aria-hidden="true">
+                      <i class="bi bi-play-fill"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="video-showcase-body">
+                  <div class="video-showcase-tags">Time-Series Intelligence · Edge AI · LLM Gating</div>
+                  <h4 class="video-showcase-title">
+                    <span class="lang-es">Detección de Anomalías Multivariables en Tiempo Real</span>
+                    <span class="lang-en">Real-Time Multivariate Anomaly Detection</span>
+                  </h4>
+                  <p class="video-showcase-desc">
+                    <span class="lang-es">Demostración en vivo sobre gemelo digital 3D interactivo con inyección de perturbaciones (bloqueo de válvula, cavitación, desgaste y drift). Evaluación concurrente de señales de alta frecuencia (presión, caudal, vibración, corriente y temperatura) contrastando modelos tradicionales (XGBoost 0.3 ms, Isolation Forest 5.2 ms), deep learning (LSTM-AE 2.0 ms) y escalación a LLMs para análisis de causa raíz.</span>
+                    <span class="lang-en">Live demonstration on an interactive 3D digital twin with fault injection (valve blockage, cavitation, wear, drift). High-frequency telemetry evaluation (pressure, flow, vibration, current, temperature) benchmarking XGBoost (0.3 ms), Isolation Forest (5.2 ms), LSTM AutoEncoder (2.0 ms), and LLM gating for root-cause reasoning.</span>
+                  </p>
+                  <div class="video-tech-pills">
+                    <span class="video-tech-pill">3D Digital Twin</span>
+                    <span class="video-tech-pill">Fault Injection</span>
+                    <span class="video-tech-pill">XGBoost (0.3ms)</span>
+                    <span class="video-tech-pill">Isolation Forest</span>
+                    <span class="video-tech-pill">LSTM-AE (2.0ms)</span>
+                    <span class="video-tech-pill">LLM Gating</span>
+                  </div>
+                  <div class="video-showcase-footer">
+                    <button type="button" class="btn-project btn-project-primary" data-video="anomalias">
+                      <i class="bi bi-play-circle-fill"></i>
+                      <span class="lang-es">Reproducir demo (1:18 min)</span>
+                      <span class="lang-en">Play demo (1:18 min)</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -518,6 +632,35 @@
       </div>
     </section>
   </main>
+
+  <!-- Video Player Modal -->
+  <div class="modal fade video-modal" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <span class="modal-video-tag" id="modalVideoTag">Demo</span>
+            <h5 class="modal-title" id="videoModalLabel">Video Demo</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <video id="modalVideoPlayer" controls playsinline preload="metadata">
+              <source src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <p class="modal-video-desc mb-0" id="modalVideoDesc"></p>
+          <button type="button" class="btn btn-sm btn-outline-light" data-bs-dismiss="modal">
+            <span class="lang-es">Cerrar</span><span class="lang-en">Close</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer id="footer"><div class="container"><div class="copyright">&copy; 2026 <strong><span>Marcos Esteban Soto</span></strong></div></div></footer>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short"></i></a>
